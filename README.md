@@ -12,6 +12,14 @@ cd TP1/src
 g++  main_tp1a.cpp TimeSpec.cpp -lrt -Wall -Wextra  -o tp1a
 ./tp1a
 ```
+### b
+
+
+```
+cd TP1/src
+g++ main_tp1b.cpp -lrt  -Wall -Wextra -o tp1b
+./tp1b
+```
 
 
 ### c
@@ -45,6 +53,13 @@ exemple:  ./tp2b 10000 3 0
 ```
 
 ## TD3
+### a
+
+```
+cd TP3/src
+g++ main_tp3a.cpp Chrono.cpp TimeSpec.cpp -lrt  -Wall -Wextra -o tp3a
+./tp3a
+```
 
 ### b
 
@@ -52,4 +67,37 @@ exemple:  ./tp2b 10000 3 0
 cd TP3/src
 g++ main_tp3b.cpp TimeSpec.cpp Timer.cpp CountDown.cpp PeriodicTimer.cpp -lrt -lpthread -Wall -Wextra -o tp3b
 ./tp3b
+```
+
+### c
+
+```
+cd TP3/src
+g++ main_tp3c.cpp Calibrator.cpp TimeSpec.cpp Cpuloop.cpp Looper.cpp Timer.cpp PeriodicTimer.cpp  -lrt  -Wall -Wextra -o tp3c
+./tp3c
+```
+
+## TD4
+### a
+
+```
+cd TP4/src
+g++ main_tp4a.cpp PosixThread.cpp Thread.cpp Chrono.cpp TimeSpec.cpp -lrt -lpthread -Wall -Wextra -o td4a
+./tp4a <nLoops> <nTasks>
+```
+
+### b
+
+```
+cd TP4/src
+g++ main_tp4b.cpp PosixThread.cpp Thread.cpp Chrono.cpp TimeSpec.cpp Mutex.cpp -lrt -lpthread -Wall -Wextra -o td4b
+./tp4b <nLoops> <nTasks>
+```
+
+### c
+
+```
+cd TP4/src
+g++ main_tp4c.cpp PosixThread.cpp Thread.cpp Chrono.cpp SemaPhore.cpp Mutex.cpp TimeSpec.cpp -lrt -lpthread -Wall -Wextra -o td4c
+./td4c <nCons> <nProd>
 ```
