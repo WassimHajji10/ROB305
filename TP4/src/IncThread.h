@@ -10,7 +10,8 @@ struct Data
 class IncrThread : public Thread 
 {
 public:
-    IncrThread(Data* data) : Thread(), data(data) {
+    IncrThread(Data* data) : Thread(), data(data) 
+    {
         this->data->nLoops = data->nLoops;
         this->data->pCounter = data->pCounter;
     }

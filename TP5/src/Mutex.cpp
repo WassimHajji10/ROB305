@@ -1,12 +1,21 @@
 #include "Mutex.h"
 
-Mutex::Mutex() 
+Mutex::Mutex(bool isInversionSafe)
 {
     pthread_mutexattr_t mutexAttr;
     pthread_mutexattr_init(&mutexAttr);
     pthread_mutexattr_settype(&mutexAttr, PTHREAD_MUTEX_RECURSIVE);
+    if(isInversionSafe)
+    {
+        pthread_mutexattr_setprotocol(&mutexAttr, PTHREAD_PRIO_INHERIT);
+    }
+    
+         
+    
+    
+    
     pthread_mutex_init(&posixId, &mutexAttr);
-    pthread_cond_init(&posixCondId, NULL);
+    pthread_cond_init(&posixCondId, nullptr);
     pthread_mutexattr_destroy(&mutexAttr);
 }
 

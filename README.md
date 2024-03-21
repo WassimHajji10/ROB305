@@ -1,6 +1,8 @@
 # ROB305 - TD
 
-ROB305  ENSTA Paris.
+Cours : ROB305  ENSTA Paris.
+
+Etudiant : Hajji Wassim
 
 ## TD1
 
@@ -100,4 +102,13 @@ g++ main_tp4b.cpp PosixThread.cpp Thread.cpp Chrono.cpp TimeSpec.cpp Mutex.cpp -
 cd TP4/src
 g++ main_tp4c.cpp PosixThread.cpp Thread.cpp Chrono.cpp SemaPhore.cpp Mutex.cpp TimeSpec.cpp -lrt -lpthread -Wall -Wextra -o td4c
 ./td4c <nCons> <nProd>
+```
+
+### TD5
+
+```
+cd TP5/src
+g++ main_tp5.cpp PosixThread.cpp Mutex.cpp ThreadCpuLoop.cpp  Calibrator.cpp TimeSpec.cpp CpuLoop.cpp Looper.cpp Timer.cpp PeriodicTimer.cpp Thread.cpp  -lrt -lpthread  -Wall -Wextra -o tp5
+./tp5
+
 ```

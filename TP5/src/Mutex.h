@@ -7,7 +7,7 @@
 class Mutex 
 {
 public:
-    Mutex();
+    Mutex(bool isInversionSafe);
     ~Mutex();
     class Monitor;
     class Lock;

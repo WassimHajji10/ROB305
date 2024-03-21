@@ -4,7 +4,8 @@
 #include "IncThread.h"
 #include <vector>
 
-int main(int argc, char* argv[]) {
+int main(int argc, char* argv[]) 
+{
     unsigned int nLoops = std::stoi(argv[1]);
     unsigned int nTasks = std::stoi(argv[2]);
 
@@ -15,16 +16,19 @@ int main(int argc, char* argv[]) {
 
     Chrono chrono;
 
-    for (unsigned int i = 0; i < nTasks; i++) {
+    for (unsigned int i = 0; i < nTasks; i++) 
+    {
         incrThreads.push_back(new IncrThread(&data));
     }
 
-    for (unsigned int i = 0; i < nTasks; i++) {
+    for (unsigned int i = 0; i < nTasks; i++) 
+    {
         incrThreads[i]->start();
         execTime += incrThreads[i]->execTime_ms();
     }
 
-    for (unsigned int i = 0; i < nTasks; i++) {
+    for (unsigned int i = 0; i < nTasks; i++) 
+    {
         incrThreads[i]->join();
     }
 
